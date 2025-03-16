@@ -1,5 +1,6 @@
-# ignore the results file (since its too large)
+# ignore the '/results' and datasets '/directories' (since they are too large to push)
 assignments/assignment-2/results/
+assignments/assignment-2/datasets/
 
 
 
