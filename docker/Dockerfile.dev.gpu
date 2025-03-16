@@ -92,3 +92,7 @@ RUN rye config --set-bool behavior.global-python=true && \
     rye config --set-bool behavior.use-uv=true
 
 RUN chown -R vscode $RYE_HOME
+
+
+
+RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0

@@ -11,12 +11,16 @@
 
 -e file:artagents
 -e file:cli
+about-time==4.2.1
+    # via alive-progress
 absl-py==2.1.0
     # via tensorboard
 aenum==3.1.15
     # via lightly
 aiobotocore==2.14.0
     # via s3fs
+aiofiles==23.2.1
+    # via gradio
 aiohappyeyeballs==2.4.0
     # via aiohttp
 aiohttp==3.10.5
@@ -35,19 +39,27 @@ aiosignal==1.3.1
     # via aiohttp
     # via ray
 alembic==1.13.2
+    # via mlflow
     # via optuna
+alive-progress==3.2.0
+    # via pymoo
 amqp==5.2.0
     # via kombu
 annotated-types==0.7.0
     # via pydantic
+anomalib==2.0.0b2
 antlr4-python3-runtime==4.9.3
     # via hydra-core
     # via omegaconf
 anyio==4.4.0
+    # via gradio
     # via httpx
     # via jupyter-server
+    # via openai
+    # via starlette
 appdirs==1.4.4
     # via iterative-telemetry
+    # via wandb
 argon2-cffi==23.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0
@@ -71,8 +83,12 @@ attrs==24.2.0
     # via jsonschema
     # via referencing
     # via sqltrie
+autograd==1.7.0
+    # via pymoo
 autopage==0.5.2
     # via cliff
+av==14.2.0
+    # via anomalib
 babel==2.16.0
     # via jupyterlab-server
 beautifulsoup4==4.12.3
@@ -81,6 +97,8 @@ billiard==4.2.0
     # via celery
 bleach==6.1.0
     # via nbconvert
+blinker==1.9.0
+    # via flask
 boost-histogram==1.5.0
     # via hist
 boto3==1.35.7
@@ -90,6 +108,9 @@ botocore==1.35.7
     # via boto3
     # via s3transfer
 bottleneck==1.4.0
+cachetools==5.5.2
+    # via google-auth
+    # via mlflow-skinny
 captum==0.7.0
 celery==5.4.0
     # via dvc
@@ -100,6 +121,7 @@ certifi==2024.8.30
     # via lightly
     # via pinecone-client
     # via requests
+    # via sentry-sdk
 cffi==1.17.0
     # via argon2-cffi-bindings
     # via cryptography
@@ -114,9 +136,13 @@ click==8.1.7
     # via click-didyoumean
     # via click-plugins
     # via click-repl
+    # via flask
     # via histoprint
+    # via mlflow-skinny
     # via ray
     # via typer
+    # via uvicorn
+    # via wandb
 click-didyoumean==0.3.1
     # via celery
 click-plugins==1.1.1
@@ -127,6 +153,10 @@ cliff==4.7.0
     # via optuna
 cloudevents==1.11.0
     # via dapr-ext-grpc
+cloudpickle==3.1.1
+    # via mlflow-skinny
+cma==3.2.2
+    # via pymoo
 cmaes==0.11.1
     # via optuna
 cmd2==2.4.3
@@ -136,11 +166,14 @@ colorama==0.4.6
 colorlog==6.8.2
     # via hydra-colorlog
     # via optuna
+comet-ml==3.49.3
+    # via anomalib
 comm==0.2.2
     # via ipykernel
     # via ipywidgets
 configobj==5.0.8
     # via dvc
+    # via everett
 contourpy==1.3.0
     # via matplotlib
 cramjam==2.8.3
@@ -152,6 +185,8 @@ cycler==0.12.1
 dapr==1.14.0
     # via dapr-ext-grpc
 dapr-ext-grpc==1.14.0
+databricks-sdk==0.44.1
+    # via mlflow-skinny
 datasets==2.21.0
 debugpy==1.8.5
     # via ipykernel
@@ -159,6 +194,9 @@ decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
     # via nbconvert
+deprecated==1.2.18
+    # via opentelemetry-api
+    # via pymoo
 deprecation==2.1.0
     # via cloudevents
 dictdiffer==0.9.0
@@ -166,6 +204,7 @@ dictdiffer==0.9.0
 dill==0.3.8
     # via datasets
     # via multiprocess
+    # via pymoo
 diskcache==5.6.3
     # via dvc-data
 distlib==0.3.8
@@ -173,9 +212,18 @@ distlib==0.3.8
 distro==1.9.0
     # via dvc
     # via iterative-telemetry
+    # via openai
+docker==7.1.0
+    # via mlflow
+docker-pycreds==0.4.0
+    # via wandb
+docstring-parser==0.16
+    # via anomalib
+    # via jsonargparse
 dpath==2.2.0
     # via dvc
 dulwich==0.22.1
+    # via comet-ml
     # via dvc
     # via dvc-studio-client
     # via scmrepo
@@ -197,21 +245,31 @@ dvc-studio-client==0.21.0
 dvc-task==0.4.0
     # via dvc
 dvclive==3.48.0
+einops==0.8.1
+    # via anomalib
 entrypoints==0.4
     # via gto
+everett==3.1.0
+    # via comet-ml
 executing==2.1.0
     # via stack-data
+fastapi==0.115.11
+    # via gradio
 fastjsonschema==2.20.0
     # via nbformat
 fastparquet==2024.5.0
+ffmpy==0.5.0
+    # via gradio
 filelock==3.15.4
     # via datasets
     # via huggingface-hub
     # via iterative-telemetry
     # via ray
     # via torch
-    # via triton
+    # via transformers
     # via virtualenv
+flask==3.0.3
+    # via mlflow
 flatten-dict==0.4.2
     # via dvc
 flufl-lock==8.1.0
@@ -220,6 +278,8 @@ fonttools==4.53.1
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
+freia==0.2
+    # via anomalib
 frozenlist==1.4.1
     # via aiohttp
     # via aiosignal
@@ -231,12 +291,15 @@ fsspec==2024.6.0
     # via dvc-http
     # via dvc-objects
     # via fastparquet
+    # via gradio-client
     # via huggingface-hub
     # via lightning
     # via pytorch-lightning
     # via s3fs
     # via scmrepo
     # via torch
+ftfy==6.3.1
+    # via open-clip-torch
 funcy==2.0
     # via dvc
     # via dvc-data
@@ -253,11 +316,29 @@ geopy==2.4.1
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.43
+    # via anomalib
+    # via mlflow-skinny
     # via scmrepo
+    # via wandb
+google-auth==2.38.0
+    # via databricks-sdk
 googleapis-common-protos==1.65.0
     # via grpcio-status
+gradio==4.44.1
+    # via anomalib
+gradio-client==1.3.0
+    # via gradio
 grandalf==0.8
     # via dvc
+grapheme==0.6.0
+    # via alive-progress
+graphene==3.4.3
+    # via mlflow
+graphql-core==3.2.6
+    # via graphene
+    # via graphql-relay
+graphql-relay==3.2.0
+    # via graphene
 graphviz==0.20.3
     # via torchviz
 greenlet==3.0.3
@@ -266,25 +347,44 @@ grpcio==1.66.1
     # via dapr
     # via grpcio-status
     # via grpcio-tools
+    # via qdrant-client
     # via tensorboard
-grpcio-status==1.66.1
+grpcio-status==1.62.3
     # via dapr
-grpcio-tools==1.64.1
+grpcio-tools==1.62.3
+    # via qdrant-client
 gto==1.7.1
     # via dvc
     # via dvclive
+gunicorn==23.0.0
+    # via mlflow
 h11==0.14.0
     # via httpcore
+    # via uvicorn
+h2==4.2.0
+    # via httpx
 hist==2.8.0
 histoprint==2.4.0
     # via hist
+hpack==4.1.0
+    # via h2
 httpcore==1.0.5
     # via httpx
 httpx==0.27.2
+    # via gradio
+    # via gradio-client
     # via jupyterlab
+    # via ollama
+    # via openai
+    # via qdrant-client
 huggingface-hub==0.24.6
     # via datasets
+    # via gradio
+    # via gradio-client
+    # via open-clip-torch
     # via timm
+    # via tokenizers
+    # via transformers
 hydra-colorlog==1.2.0
 hydra-core==1.3.2
     # via dvc
@@ -292,6 +392,8 @@ hydra-core==1.3.2
     # via hydra-optuna-sweeper
     # via lightly
 hydra-optuna-sweeper==1.2.0
+hyperframe==6.1.0
+    # via h2
 identify==2.6.0
     # via pre-commit
 idna==3.8
@@ -301,8 +403,16 @@ idna==3.8
     # via requests
     # via yarl
 imageio==2.35.1
+    # via imgaug
     # via scikit-image
+imgaug==0.4.0
+importlib-metadata==8.6.1
+    # via mlflow-skinny
+importlib-resources==6.5.2
+    # via gradio
+    # via typeshed-client
 ipykernel==6.29.5
+    # via anomalib
     # via jupyter
     # via jupyter-console
     # via jupyterlab
@@ -311,19 +421,27 @@ ipython==8.27.0
     # via ipywidgets
     # via jupyter-console
 ipywidgets==8.1.5
+    # via anomalib
     # via jupyter
 isoduration==20.11.0
     # via jsonschema
 iterative-telemetry==0.0.8
     # via dvc
+itsdangerous==2.2.0
+    # via flask
 jedi==0.19.1
     # via ipython
 jinja2==3.1.4
+    # via flask
+    # via gradio
     # via jupyter-server
     # via jupyterlab
     # via jupyterlab-server
+    # via mlflow
     # via nbconvert
     # via torch
+jiter==0.8.2
+    # via openai
 jmespath==1.0.1
     # via boto3
     # via botocore
@@ -332,16 +450,22 @@ joblib==1.4.2
     # via scikit-learn
 json5==0.9.25
     # via jupyterlab-server
+jsonargparse==4.37.0
+    # via anomalib
 jsonpointer==3.0.0
     # via jsonschema
 jsonschema==4.23.0
     # via clearml
+    # via comet-ml
     # via jupyter-events
     # via jupyterlab-server
     # via nbformat
+    # via nncf
     # via ray
 jsonschema-specifications==2023.12.1
     # via jsonschema
+jstyleson==0.0.2
+    # via nncf
 jupyter==1.1.1
 jupyter-client==8.6.2
     # via ipykernel
@@ -388,13 +512,19 @@ kombu==5.4.0
     # via celery
     # via dvc
     # via dvc-task
+kornia==0.8.0
+    # via anomalib
+kornia-rs==0.1.8
+    # via kornia
 lazy-loader==0.4
     # via scikit-image
 lightly==1.5.12
 lightly-utils==0.0.2
     # via lightly
 lightning==2.4.0
+    # via anomalib
 lightning-utilities==0.11.7
+    # via anomalib
     # via lightning
     # via pytorch-lightning
     # via torchmetrics
@@ -404,19 +534,26 @@ llvmlite==0.43.0
 mako==1.3.5
     # via alembic
 markdown==3.7
+    # via mlflow
     # via tensorboard
 markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.5
+    # via gradio
     # via jinja2
     # via mako
     # via nbconvert
     # via werkzeug
 matplotlib==3.9.2
+    # via anomalib
     # via captum
+    # via gradio
     # via hist
+    # via imgaug
+    # via mlflow
     # via mplhep
     # via pycocotools
+    # via pymoo
     # via seaborn
 matplotlib-inline==0.1.7
     # via ipykernel
@@ -425,6 +562,10 @@ mdurl==0.1.2
     # via markdown-it-py
 mistune==3.0.2
     # via nbconvert
+mlflow==2.20.3
+    # via anomalib
+mlflow-skinny==2.20.3
+    # via mlflow
 mplhep==0.3.51
     # via hist
 mplhep-data==0.0.3
@@ -439,6 +580,8 @@ multidict==6.0.5
 multiprocess==0.70.16
     # via datasets
 nats-py==2.9.0
+natsort==8.4.0
+    # via nncf
 nbclient==0.10.0
     # via nbconvert
 nbconvert==7.16.4
@@ -452,11 +595,17 @@ nest-asyncio==1.6.0
     # via ipykernel
 networkx==3.3
     # via dvc
+    # via nncf
     # via scikit-image
     # via torch
+ninja==1.11.1.3
+    # via nncf
+nncf==2.11.0
+    # via anomalib
 nodeenv==1.9.1
     # via pre-commit
 notebook==7.2.2
+    # via anomalib
     # via jupyter
 notebook-shim==0.2.4
     # via jupyterlab
@@ -464,79 +613,121 @@ notebook-shim==0.2.4
 numba==0.60.0
     # via pynndescent
     # via umap-learn
-numexpr==2.10.1
-numpy==2.0.2
+numexpr==2.10.2
+numpy==1.26.4
+    # via autograd
     # via boost-histogram
     # via bottleneck
     # via captum
     # via clearml
+    # via cma
     # via cmaes
     # via contourpy
     # via datasets
     # via fastparquet
+    # via freia
+    # via gradio
     # via hist
     # via histoprint
     # via imageio
+    # via imgaug
     # via lightly
     # via lightly-utils
     # via matplotlib
+    # via mlflow
     # via mplhep
+    # via nncf
     # via numba
     # via numexpr
+    # via onnx
+    # via opencv-python
     # via opencv-python-headless
+    # via openvino
     # via optuna
     # via pandas
     # via pyarrow
     # via pycocotools
+    # via pymoo
+    # via qdrant-client
     # via scikit-image
     # via scikit-learn
     # via scipy
     # via seaborn
+    # via shapely
     # via tensorboard
     # via tensorboard-logger
     # via tifffile
     # via torchmetrics
     # via torchvision
+    # via transformers
     # via uhi
     # via umap-learn
-nvidia-cublas-cu12==12.1.3.1
+nvidia-cublas-cu12==12.4.5.8
     # via nvidia-cudnn-cu12
     # via nvidia-cusolver-cu12
     # via torch
-nvidia-cuda-cupti-cu12==12.1.105
+nvidia-cuda-cupti-cu12==12.4.127
     # via torch
-nvidia-cuda-nvrtc-cu12==12.1.105
+nvidia-cuda-nvrtc-cu12==12.4.127
     # via torch
-nvidia-cuda-runtime-cu12==12.1.105
+nvidia-cuda-runtime-cu12==12.4.127
     # via torch
 nvidia-cudnn-cu12==9.1.0.70
     # via torch
-nvidia-cufft-cu12==11.0.2.54
+nvidia-cufft-cu12==11.2.1.3
     # via torch
-nvidia-curand-cu12==10.3.2.106
+nvidia-curand-cu12==10.3.5.147
     # via torch
-nvidia-cusolver-cu12==11.4.5.107
+nvidia-cusolver-cu12==11.6.1.9
     # via torch
-nvidia-cusparse-cu12==12.1.0.106
+nvidia-cusparse-cu12==12.3.1.170
     # via nvidia-cusolver-cu12
     # via torch
-nvidia-nccl-cu12==2.20.5
+nvidia-cusparselt-cu12==0.6.2
     # via torch
-nvidia-nvjitlink-cu12==12.6.68
+nvidia-nccl-cu12==2.21.5
+    # via torch
+nvidia-nvjitlink-cu12==12.4.127
     # via nvidia-cusolver-cu12
     # via nvidia-cusparse-cu12
-nvidia-nvtx-cu12==12.1.105
     # via torch
+nvidia-nvtx-cu12==12.4.127
+    # via torch
+ollama==0.3.3
+    # via anomalib
 omegaconf==2.3.0
+    # via anomalib
     # via dvc
     # via hydra-core
+onnx==1.17.0
+    # via anomalib
+open-clip-torch==2.24.0
+    # via anomalib
+openai==1.65.2
+    # via anomalib
+opencv-python==4.11.0.86
+    # via anomalib
+    # via imgaug
 opencv-python-headless==4.10.0.84
+opentelemetry-api==1.16.0
+    # via mlflow-skinny
+    # via opentelemetry-sdk
+opentelemetry-sdk==1.16.0
+    # via mlflow-skinny
+opentelemetry-semantic-conventions==0.37b0
+    # via opentelemetry-sdk
+openvino==2025.0.0
+    # via anomalib
+openvino-telemetry==2025.0.1
+    # via nncf
+    # via openvino
 optuna==2.10.1
     # via hydra-optuna-sweeper
 orderedmultidict==1.0.1
     # via furl
 orjson==3.10.7
     # via dvc-data
+    # via gradio
     # via sqltrie
 overrides==7.7.0
     # via jupyter-server
@@ -545,26 +736,38 @@ packaging==24.1
     # via deprecation
     # via dvc
     # via fastparquet
+    # via gradio
+    # via gradio-client
+    # via gunicorn
     # via huggingface-hub
     # via hydra-core
     # via ipykernel
     # via jupyter-server
     # via jupyterlab
     # via jupyterlab-server
+    # via kornia
     # via lazy-loader
     # via lightning
     # via lightning-utilities
     # via matplotlib
+    # via mlflow-skinny
     # via mplhep
     # via nbconvert
+    # via nncf
+    # via openvino
     # via optuna
     # via pytorch-lightning
     # via ray
     # via scikit-image
     # via torchmetrics
+    # via transformers
 pandas==2.2.2
+    # via anomalib
     # via datasets
     # via fastparquet
+    # via gradio
+    # via mlflow
+    # via nncf
     # via seaborn
 pandocfilters==1.5.1
     # via nbconvert
@@ -575,13 +778,17 @@ pathlib2==2.3.7.post1
 pathspec==0.12.1
     # via dvc
     # via scmrepo
+pathtools==0.1.2
+    # via wandb
 pbr==6.1.0
     # via stevedore
 pexpect==4.9.0
     # via ipython
 pillow==10.4.0
     # via clearml
+    # via gradio
     # via imageio
+    # via imgaug
     # via lightly-utils
     # via matplotlib
     # via scikit-image
@@ -597,6 +804,8 @@ platformdirs==3.11.0
     # via dvc
     # via jupyter-core
     # via virtualenv
+portalocker==2.10.1
+    # via qdrant-client
 pre-commit==3.8.0
 prettytable==3.11.0
     # via cliff
@@ -606,20 +815,27 @@ prompt-toolkit==3.0.47
     # via click-repl
     # via ipython
     # via jupyter-console
-protobuf==5.28.0
+protobuf==4.25.6
     # via dapr
     # via googleapis-common-protos
     # via grpcio-status
     # via grpcio-tools
+    # via mlflow-skinny
+    # via onnx
+    # via open-clip-torch
     # via ray
     # via tensorboard
     # via tensorboard-logger
+    # via wandb
 psutil==6.0.0
     # via clearml
+    # via comet-ml
     # via dvc
     # via dvclive
     # via flufl-lock
     # via ipykernel
+    # via nncf
+    # via wandb
 ptyprocess==0.7.0
     # via pexpect
     # via terminado
@@ -627,16 +843,30 @@ pure-eval==0.2.3
     # via stack-data
 pyarrow==17.0.0
     # via datasets
+    # via mlflow
+pyasn1==0.6.1
+    # via pyasn1-modules
+    # via rsa
+pyasn1-modules==0.4.1
+    # via google-auth
 pycocotools==2.0.8
 pycparser==2.22
     # via cffi
 pydantic==2.8.2
+    # via fastapi
+    # via gradio
     # via gto
     # via lightly
+    # via mlflow-skinny
+    # via openai
+    # via qdrant-client
 pydantic-core==2.20.1
     # via pydantic
 pydot==3.0.1
     # via dvc
+    # via nncf
+pydub==0.25.1
+    # via gradio
 pygit2==1.15.1
     # via scmrepo
 pygments==2.18.0
@@ -651,6 +881,8 @@ pygtrie==2.5.0
     # via sqltrie
 pyjwt==2.8.0
     # via clearml
+pymoo==0.6.1.3
+    # via nncf
 pynndescent==0.5.13
     # via umap-learn
 pynvml==11.5.3
@@ -663,20 +895,26 @@ pyparsing==3.1.4
     # via pydot
 pyperclip==1.9.0
     # via cmd2
+python-box==6.1.0
+    # via comet-ml
 python-dateutil==2.9.0.post0
     # via arrow
     # via botocore
     # via celery
     # via clearml
     # via dapr
+    # via graphene
     # via jupyter-client
     # via lightly
     # via matplotlib
     # via pandas
 python-dotenv==1.0.1
+    # via anomalib
     # via rootutils
 python-json-logger==2.0.7
     # via jupyter-events
+python-multipart==0.0.20
+    # via gradio
 pytorch-lightning==2.4.0
     # via lightly
     # via lightning
@@ -686,36 +924,54 @@ pyyaml==6.0.2
     # via clearml
     # via cliff
     # via datasets
+    # via gradio
     # via huggingface-hub
+    # via jsonargparse
     # via jupyter-events
     # via lightning
+    # via mlflow-skinny
     # via omegaconf
     # via optuna
     # via pre-commit
     # via pytorch-lightning
     # via ray
     # via timm
+    # via transformers
+    # via wandb
 pyzmq==26.2.0
     # via ipykernel
     # via jupyter-client
     # via jupyter-console
     # via jupyter-server
+qdrant-client==1.13.2
 ray==2.35.0
 referencing==0.35.1
     # via clearml
     # via jsonschema
     # via jsonschema-specifications
     # via jupyter-events
+regex==2024.11.6
+    # via open-clip-torch
+    # via transformers
 requests==2.32.3
     # via clearml
+    # via comet-ml
+    # via databricks-sdk
     # via datasets
+    # via docker
     # via dvc
     # via dvc-studio-client
     # via huggingface-hub
     # via iterative-telemetry
     # via jupyterlab-server
     # via lightly
+    # via mlflow-skinny
     # via ray
+    # via requests-toolbelt
+    # via transformers
+    # via wandb
+requests-toolbelt==1.0.0
+    # via comet-ml
 rfc3339-validator==0.1.4
     # via jsonschema
     # via jupyter-events
@@ -723,19 +979,29 @@ rfc3986-validator==0.1.1
     # via jsonschema
     # via jupyter-events
 rich==13.8.0
+    # via anomalib
+    # via comet-ml
     # via dvc
     # via gto
+    # via nncf
+    # via rich-argparse
     # via typer
+rich-argparse==1.7.0
+    # via anomalib
 rootutils==1.0.7
 rpds-py==0.20.0
     # via jsonschema
     # via referencing
+rsa==4.9
+    # via google-auth
 ruamel-yaml==0.18.6
     # via dvc
     # via dvclive
     # via gto
 ruamel-yaml-clib==0.2.8
     # via ruamel-yaml
+ruff==0.9.9
+    # via gradio
 s3fs==2024.6.0
 s3path==0.5.8
 s3torchconnector==1.2.4
@@ -745,12 +1011,22 @@ s3transfer==0.10.2
     # via boto3
 safetensors==0.4.4
     # via timm
+    # via transformers
 scikit-image==0.24.0
+    # via anomalib
+    # via imgaug
 scikit-learn==1.5.1
+    # via mlflow
+    # via nncf
     # via pynndescent
     # via umap-learn
 scipy==1.14.1
+    # via freia
+    # via imgaug
+    # via mlflow
+    # via nncf
     # via optuna
+    # via pymoo
     # via pynndescent
     # via scikit-image
     # via scikit-learn
@@ -761,16 +1037,31 @@ scmrepo==3.3.7
     # via dvclive
     # via gto
 seaborn==0.13.2
+semantic-version==2.10.0
+    # via comet-ml
+    # via gradio
 semver==3.0.2
     # via gto
 send2trash==1.8.3
     # via jupyter-server
+sentencepiece==0.2.0
+    # via open-clip-torch
+sentry-sdk==2.22.0
+    # via comet-ml
+    # via wandb
+setproctitle==1.3.5
+    # via wandb
 setuptools==74.1.1
     # via grpcio-tools
     # via jupyterlab
     # via lightning-utilities
+    # via opentelemetry-api
+    # via opentelemetry-sdk
     # via tensorboard
+    # via wandb
     # via zc-lockfile
+shapely==2.0.7
+    # via imgaug
 shellingham==1.5.4
     # via typer
 shortuuid==1.0.13
@@ -778,13 +1069,17 @@ shortuuid==1.0.13
     # via dvc-task
 shtab==1.7.1
     # via dvc
+simplejson==3.20.1
+    # via comet-ml
 six==1.16.0
     # via asttokens
     # via bleach
     # via clearml
     # via configobj
+    # via docker-pycreds
     # via flatten-dict
     # via furl
+    # via imgaug
     # via lightly
     # via orderedmultidict
     # via pathlib2
@@ -799,23 +1094,31 @@ smmap==5.0.1
 sniffio==1.3.1
     # via anyio
     # via httpx
+    # via openai
 soupsieve==2.6
     # via beautifulsoup4
 sqlalchemy==2.0.34
     # via alembic
+    # via mlflow
     # via optuna
+sqlparse==0.5.3
+    # via mlflow-skinny
 sqltrie==0.11.1
     # via dvc-data
 stack-data==0.6.3
     # via ipython
+starlette==0.46.0
+    # via fastapi
 stevedore==5.3.0
     # via cliff
-sympy==1.13.2
+sympy==1.13.1
     # via torch
 tabulate==0.9.0
     # via dvc
     # via gto
+    # via nncf
 tensorboard==2.16.2
+    # via anomalib
 tensorboard-data-server==0.7.2
     # via tensorboard
 tensorboard-logger==0.1.0
@@ -825,17 +1128,27 @@ terminado==0.18.1
 threadpoolctl==3.5.0
     # via scikit-learn
 tifffile==2024.8.30
+    # via anomalib
     # via scikit-image
-timm==1.0.9
+timm==1.0.15
+    # via anomalib
+    # via open-clip-torch
 tinycss2==1.3.0
     # via nbconvert
+tokenizers==0.21.0
+    # via transformers
 toml==0.10.2
-tomlkit==0.13.2
+tomlkit==0.12.0
     # via dvc
-torch==2.4.0
+    # via gradio
+torch==2.6.0
+    # via anomalib
     # via captum
+    # via freia
+    # via kornia
     # via lightly
     # via lightning
+    # via open-clip-torch
     # via pytorch-lightning
     # via s3torchconnector
     # via timm
@@ -844,11 +1157,13 @@ torch==2.4.0
     # via torchviz
 torchinfo==1.8.0
 torchmetrics==1.4.1
+    # via anomalib
     # via lightning
     # via pytorch-lightning
 torchsummary==1.5.1
-torchvision==0.19.0
+torchvision==0.21.0
     # via lightly
+    # via open-clip-torch
     # via timm
 torchviz==0.0.2
 tornado==6.4.1
@@ -867,10 +1182,14 @@ tqdm==4.66.5
     # via huggingface-hub
     # via lightly
     # via lightning
+    # via nncf
+    # via open-clip-torch
+    # via openai
     # via optuna
     # via pinecone-client
     # via pytorch-lightning
     # via scmrepo
+    # via transformers
     # via umap-learn
 traitlets==5.14.3
     # via comm
@@ -887,21 +1206,33 @@ traitlets==5.14.3
     # via nbclient
     # via nbconvert
     # via nbformat
-triton==3.0.0
+transformers==4.48.3
+    # via anomalib
+triton==3.2.0
     # via torch
 typer==0.12.5
+    # via gradio
     # via gto
 types-python-dateutil==2.9.0.20240821
     # via arrow
 types-requests==2.32.0.20240712
+typeshed-client==2.7.0
+    # via jsonargparse
 typing-extensions==4.12.2
     # via alembic
     # via asyncssh
     # via dapr
+    # via fastapi
+    # via gradio
+    # via gradio-client
+    # via graphene
     # via huggingface-hub
     # via ipython
     # via lightning
     # via lightning-utilities
+    # via mlflow-skinny
+    # via openai
+    # via opentelemetry-sdk
     # via pinecone-client
     # via pydantic
     # via pydantic-core
@@ -909,6 +1240,7 @@ typing-extensions==4.12.2
     # via sqlalchemy
     # via torch
     # via typer
+    # via typeshed-client
 tzdata==2024.1
     # via celery
     # via pandas
@@ -921,11 +1253,18 @@ uri-template==1.3.0
 urllib3==2.2.2
     # via botocore
     # via clearml
+    # via comet-ml
+    # via docker
     # via dulwich
+    # via gradio
     # via lightly
     # via pinecone-client
+    # via qdrant-client
     # via requests
+    # via sentry-sdk
     # via types-requests
+uvicorn==0.34.0
+    # via gradio
 vine==5.1.0
     # via amqp
     # via celery
@@ -935,8 +1274,11 @@ virtualenv==20.26.3
 voluptuous==0.15.2
     # via dvc
     # via dvc-studio-client
+wandb==0.15.9
+    # via anomalib
 wcwidth==0.2.13
     # via cmd2
+    # via ftfy
     # via prettytable
     # via prompt-toolkit
 webcolors==24.8.0
@@ -946,16 +1288,25 @@ webencodings==0.5.1
     # via tinycss2
 websocket-client==1.8.0
     # via jupyter-server
+websockets==12.0
+    # via gradio-client
 werkzeug==3.0.4
+    # via flask
     # via tensorboard
 widgetsnbextension==4.0.13
     # via ipywidgets
 wrapt==1.16.0
     # via aiobotocore
+    # via comet-ml
+    # via deprecated
     # via smart-open
+wurlitzer==3.1.1
+    # via comet-ml
 xxhash==3.5.0
     # via datasets
 yarl==1.9.8
     # via aiohttp
 zc-lockfile==3.0.post1
     # via dvc
+zipp==3.21.0
+    # via importlib-metadata
