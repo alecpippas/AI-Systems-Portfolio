@@ -11,7 +11,7 @@ authors = [
 dependencies = [
     "pre-commit>=3.7.1",
     "jupyterlab-quarto>=0.3.3",
-    "jupyter>=1.0.0",
+    "jupyter>=1.1.1",
     "torch>=2.6.0",
     "torchmetrics>=1.4.0.post0",
     "rich>=13.7.1",
@@ -69,6 +69,9 @@ dependencies = [
     "imgaug>=0.4.0",
     "numpy<2.0",
     "qdrant-client>=1.13.2",
+    "opencv-python>=4.11.0.86",
+    "ultralytics>=8.3.91",
+    "yt-dlp>=2025.2.19",
 ]
 readme = "README.md"
 requires-python = "== 3.11.9"
