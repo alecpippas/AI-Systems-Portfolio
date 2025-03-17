@@ -10,6 +10,14 @@ assignments/assignment-3/Assignment_3_video_ActiveTrack
 # ignore kalman_output_frame directory
 assigments/assignment-3/kalman_filtered_frames
 
+# ingore Assignment 3 Task 3 frame directories
+assigments/assignment-3/extracted_frames_car_count
+assigments/assignment-3/processed_frames_car_count
+
+#ignore runs with finetuning VisDrone data
+runs
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
