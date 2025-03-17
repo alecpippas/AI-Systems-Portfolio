@@ -7,6 +7,8 @@ assignments/assignment-3/extracted_frames/
 assignments/assignment-3/processed_frames/
 assignments/assignment-3/Assignment_3_video_ActiveTrack
 
+# ignore kalman_output_frame directory
+assigments/assignment-3/kalman_filtered_frames
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

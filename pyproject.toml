@@ -72,6 +72,7 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "ultralytics>=8.3.91",
     "yt-dlp>=2025.2.19",
+    "filterpy>=1.4.5",
 ]
 readme = "README.md"
 requires-python = "== 3.11.9"
