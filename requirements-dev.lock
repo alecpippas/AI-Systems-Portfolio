@@ -813,6 +813,7 @@ pinecone-plugin-inference==1.0.3
 pinecone-plugin-interface==0.0.7
     # via pinecone-client
     # via pinecone-plugin-inference
+planutils==0.10.18
 platformdirs==3.11.0
     # via dvc
     # via jupyter-core
@@ -990,6 +991,7 @@ requests==2.32.3
     # via jupyterlab-server
     # via lightly
     # via mlflow-skinny
+    # via planutils
     # via ray
     # via requests-toolbelt
     # via transformers

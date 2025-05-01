@@ -1,0 +1,52 @@
+
+
+NUMERIC_THREATS_MODE: 0
+
+; Command line: /home/alecpippas/.planutils/packages/lpg-td/bin/lpg-td -o assignments/assignment-4/domain.pddl -f assignments/assignment-4/problem.pddl -noout -n 1   
+
+
+Parsing domain file:  domain 'OPENROUTER' defined ... done.
+Parsing problem file:  problem 'OPENROUTER-REQUESTS' defined ... done.
+
+
+
+Modality: Incremental Planner
+
+Number of actions             :       4
+Number of conditional actions :       0
+Number of facts               :       8
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: YES
+	Problem with Timed Initial Literals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (ROUTE-REQUEST REQ2 GPT4O ACCT2 SIMPLE_AGENTIC_LOOP) [D:1.00; C:0.10]
+ 0.0000: (ROUTE-REQUEST REQ1 GPT3DOT5 ACCT1 QUICKSTART) [D:1.00; C:0.10]
+
+
+
+METRIC_VALUE = 0.00
+Solution number: 1
+Total time:      0.02
+Search time:     0.02
+Actions:         2
+Duration:        1.000
+Plan quality:    0.000 
+Total Num Flips: 2
+

@@ -73,6 +73,7 @@ dependencies = [
     "ultralytics>=8.3.91",
     "yt-dlp>=2025.2.19",
     "filterpy>=1.4.5",
+    "planutils>=0.10.18",
 ]
 readme = "README.md"
 requires-python = "== 3.11.9"
