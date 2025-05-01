@@ -1,7 +1,10 @@
+assignments/asssignment-3/.cometml-runs/
+
 # ignore the '/results' and '/datasets' directories (since they are too large to push) from Assignment 2
 assignments/assignment-2/results/
 assignments/assignment-2/datasets/
 assignments/asssignment-3/datasets/
+assignments/asssignment-3/datasets/VisDrone
 
 # ignore the '/assignmnet-3/extracted_frames' and '""/processed_frames/' directories (since they are too large to push) from Assignemnt 3
 assignments/assignment-3/extracted_frames/
