@@ -1,26 +1,84 @@
-assignments/assignment-3/Assignment3_Task3_video.mp4
-assignments/assignment-3/.cometml-runs/
+# =============================================================================
+# LARGE FILES AND DATASETS
+# =============================================================================
 
-# ignore the '/results' and '/datasets' directories (since they are too large to push) from Assignment 2
-assignments/assignment-2/results/
-assignments/assignment-2/datasets/
-assignments/assignment-3/datasets/
-assignments/assignment-3/datasets/dvclive
+# Large video files
+*.mp4
+*.avi
+*.mov
+*.mkv
 
-# ignore the '/assignmnet-3/extracted_frames' and '""/processed_frames/' directories (since they are too large to push) from Assignemnt 3
-assignments/assignment-3/extracted_frames/
-assignments/assignment-3/processed_frames/
-assignments/assignment-3/Assignment_3_video_ActiveTrack
+# Large dataset files (VisDrone, etc.)
+ai_pipelines/object_detection_and_tracking/datasets/VisDrone/*.zip
+ai_pipelines/object_detection_and_tracking/datasets/*.zip
+ai_pipelines/computer_vision_anomaly_detection/datasets/*.zip
 
-# ignore kalman_output_frame directory
-assigments/assignment-3/kalman_filtered_frames
+# Large model files
+ai_pipelines/object_detection_and_tracking/*.pt
+ai_pipelines/object_detection_and_tracking/*.pth
+ai_pipelines/computer_vision_anomaly_detection/*.pt
+ai_pipelines/computer_vision_anomaly_detection/*.pth
 
-# ingore Assignment 3 Task 3 frame directories
-assigments/assignment-3/extracted_frames_car_count
-assigments/assignment-3/processed_frames_car_count
+# Large notebook files (if they contain embedded data)
+*demonstration*.ipynb
+*_large*.ipynb
 
-#ignore runs with finetuning VisDrone data
-runs
+# CometML runs and experiment tracking
+.cometml-runs/
+runs/
+dvclive/
+
+# =============================================================================
+# AI PIPELINES - SPECIFIC DIRECTORIES
+# =============================================================================
+
+# Object Detection & Tracking
+ai_pipelines/object_detection_and_tracking/extracted_frames/
+ai_pipelines/object_detection_and_tracking/processed_frames/
+ai_pipelines/object_detection_and_tracking/kalman_filtered_frames/
+ai_pipelines/object_detection_and_tracking/extracted_frames_car_count/
+ai_pipelines/object_detection_and_tracking/processed_frames_car_count/
+
+# Computer Vision Anomaly Detection
+ai_pipelines/computer_vision_anomaly_detection/results/
+ai_pipelines/computer_vision_anomaly_detection/datasets/
+ai_pipelines/computer_vision_anomaly_detection/checkpoints/
+
+# Statistical Learning Foundations
+ai_pipelines/statistical_learning_foundations/results/
+ai_pipelines/statistical_learning_foundations/data/
+
+# PDDL LLM Routing Agent
+ai_pipelines/pddl_llm_routing_agent/results/
+ai_pipelines/pddl_llm_routing_agent/data/
+
+# =============================================================================
+# RAG SYSTEM PROJECT
+# =============================================================================
+
+# RAG system specific large files
+RAG_system_project/cleaned_captions/
+RAG_system_project/videos/
+RAG_system_project/clip_finetuned/
+RAG_system_project/checkpoints/
+RAG_system_project/temp_clip_dir/
+RAG_system_project/llm_engineering.egg-info/
+
+# =============================================================================
+# GENERAL LARGE FILES
+# =============================================================================
+
+# Data files
+data/
+datafiles/
+*.parquet
+*.csv.gz
+*.json.gz
+
+# Output and save directories
+outputs/
+save/
+results/
 
 
 # Byte-compiled / optimized / DLL files

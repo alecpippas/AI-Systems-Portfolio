@@ -1,1 +1,1 @@
-Outline for Assignment 3: Object Detection with Kalman Filters
+Outline for Object Detection with Kalman Filters Project
