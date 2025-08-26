@@ -2,6 +2,7 @@
 
 #### _Demonstration shown in demonstartion.ipynb_
 
+May have to download to a local device in order to view, given file is greater than Github 50MB limit for remote files.
 
 #### __QDrant and MongoDB Containers__
 
