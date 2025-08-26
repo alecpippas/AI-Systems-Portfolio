@@ -1,0 +1,1 @@
+Outline for Assignment 3: Object Detection with Kalman Filters
