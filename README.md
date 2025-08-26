@@ -69,6 +69,17 @@ cp .env.example .env
 # Edit .env with your configuration
 ```
 
+### Clone with Submodules
+```bash
+# Clone the repository with submodules
+git clone --recursive <repository-url>
+cd ai-systems-portfolio
+
+# Or if already cloned, initialize submodules
+git submodule update --init --recursive
+```
+```
+
 ### Running the RAG System
 ```bash
 cd project
