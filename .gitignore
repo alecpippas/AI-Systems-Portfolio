@@ -19,9 +19,7 @@ ai_pipelines/object_detection_and_tracking/*.pth
 ai_pipelines/computer_vision_anomaly_detection/*.pt
 ai_pipelines/computer_vision_anomaly_detection/*.pth
 
-# Large notebook files (if they contain embedded data)
-*demonstration*.ipynb
-*_large*.ipynb
+
 
 # CometML runs and experiment tracking
 .cometml-runs/
