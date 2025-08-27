@@ -1,4 +1,15 @@
+# RAG Video Retrieval System
 
+A text-to-video retrieval system that uses fine-tuned CLIP models and vector databases to enable semantic search through video content. The system processes lecture recordings and allows users to find relevant video segments using natural language queries.
+
+## Project Overview
+
+This system demonstrates modern AI techniques for video understanding and retrieval:
+- **Fine-tuned CLIP models** for video-text alignment
+- **Vector database integration** (Qdrant) for efficient similarity search
+- **ETL pipelines** for video processing and feature extraction
+- **Gradio web interface** for user interaction
+- **Docker containerization** for deployment
 
 #### _Demonstration shown in demonstartion.ipynb_
 
